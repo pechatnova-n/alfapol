@@ -1,0 +1,15 @@
+mixin stikers(mods)
+  -
+    const baseName = 'stikers'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '_' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  ul.stikers(class=allMods)&attributes(attributes)
+    li.stikers__item новинка
+    li.stikers__item лучшее

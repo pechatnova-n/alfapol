@@ -1,0 +1,22 @@
+mixin icons(mods)
+  -
+    const baseName = 'icons'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '_' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  .icons(class=allMods)&attributes(attributes)
+    ul.icons__list
+      li.icons__item
+        p.icons__icon
+          +card-icon2
+        p.icons__tooltip Универсальность применения
+      li.icons__item
+        p.icons__icon
+          +card-icon1
+        p.icons__tooltip Универсальность применения

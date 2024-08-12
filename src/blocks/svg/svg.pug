@@ -2,9 +2,46 @@ mixin reset
   svg(class=attributes.class xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 48 48' fill='none')
     path(d='M18.15 18.15L29.85 29.85' stroke='#A5B7B3' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
     path(d='M18.15 29.85L29.85 18.15' stroke='#A5B7B3' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
-mixin tick 
+mixin tick
   svg(width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg')
     path(d='M20 7L14.6093 13.4688C12.4732 16.0322 11.4051 17.3139 10 17.3139C8.59488 17.3139 7.52681 16.0322 5.39067 13.4688L4 11.8' stroke='#62215B' stroke-width='2' stroke-linecap='round')
 mixin arrow-bottom
   svg(width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg')
     path(d='M16 17L11 22M11 22L6 17M11 22L11 10C11 8.93913 11.4214 7.92172 12.1716 7.17157C12.9217 6.42143 13.9391 6 15 6L22 6' stroke='#5C5772' stroke-linecap='round' stroke-linejoin='round')
+
+mixin ic-arrow
+  svg(width='24' height='24' viewbox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+    path(d='M21.2705 11.0193C21.6732 11.3983 21.6919 12.0321 21.3122 12.4342L18.727 15.1714C18.1058 15.8292 17 15.3895 17 14.4848L17 9.31443C17 8.43805 18.0472 7.98559 18.6854 8.58623L21.2705 11.0193Z' fill='#0184FF')
+    path(d='M2 11C1.58579 11 1.25 11.3358 1.25 11.75C1.25 12.1642 1.58579 12.5 2 12.5L2 11ZM17 11L2 11L2 12.5L17 12.5L17 11Z' fill='#0184FF')
+mixin card-icon1
+  svg(width='31' height='38' viewbox='0 0 31 38' fill='none' xmlns='http://www.w3.org/2000/svg')
+    path(d='M11.7812 5.40013L15.8313 1.44996L19.6023 5.32003' stroke='#0184FF' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round')
+    path(d='M24.6062 5.5H30.193V10.9745' stroke='#0184FF' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round')
+    path(fill-rule='evenodd' clip-rule='evenodd' d='M11.8563 19C11.8563 19.4142 11.5205 19.75 11.1063 19.75C10.692 19.75 10.3563 19.4142 10.3563 19V15.1084L1.13035 6.03472C0.835031 5.74428 0.83108 5.26942 1.12153 4.9741C1.41197 4.67878 1.88683 4.67483 2.18215 4.96528L11.6322 14.2593C11.7755 14.4003 11.8563 14.593 11.8563 14.7941V19ZM15.8312 19.75C15.417 19.75 15.0812 19.4142 15.0812 19L15.0813 2.125C15.0813 1.71079 15.417 1.375 15.8313 1.375C16.2455 1.375 16.5813 1.71079 16.5813 2.125L16.5812 19C16.5812 19.4142 16.2455 19.75 15.8312 19.75ZM20.5563 19.75C20.9705 19.75 21.3063 19.4142 21.3063 19V15.1084L30.5322 6.03472C30.8275 5.74428 30.8314 5.26942 30.541 4.9741C30.2505 4.67878 29.7757 4.67483 29.4804 4.96528L20.0304 14.2593C19.887 14.4003 19.8063 14.593 19.8063 14.7941V19C19.8063 19.4142 20.142 19.75 20.5563 19.75Z' fill='url(#paint0_linear_312_15)')
+    path(d='M7.24304 5.5H1.65625V10.9745' stroke='#0184FF' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round')
+    path(fill-rule='evenodd' clip-rule='evenodd' d='M8.33127 19.75V35.8H7.52841C7.1142 35.8 6.77841 36.1358 6.77841 36.55C6.77841 36.9642 7.1142 37.3 7.52841 37.3H9.08127H23.2563H25.25C25.6642 37.3 26 36.9642 26 36.55C26 36.1358 25.6642 35.8 25.25 35.8H24.0063V19.75H24.7779C25.1921 19.75 25.5279 19.4142 25.5279 19C25.5279 18.5858 25.1921 18.25 24.7779 18.25H23.2563H9.08127H7.05627C6.64206 18.25 6.30627 18.5858 6.30627 19C6.30627 19.4142 6.64206 19.75 7.05627 19.75H8.33127ZM22.5063 35.8H9.83127V19.75H22.5063V35.8Z' fill='#0E2245')
+    path(d='M25.9563 23.725C25.9563 27.4529 23.2364 30.475 19.8813 30.475C16.5261 30.475 13.8063 27.4529 13.8063 23.725' stroke='url(#paint1_linear_312_15)' stroke-width='1.5' stroke-linecap='round')
+    defs
+      lineargradient#paint0_linear_312_15(x1='15.8312' y1='18.8833' x2='15.8312' y2='5.70873' gradientunits='userSpaceOnUse')
+        stop(stop-color='#0184FF' stop-opacity='0')
+        stop(offset='1' stop-color='#0184FF')
+      lineargradient#paint1_linear_312_15(x1='24.264' y1='28.7875' x2='25.9515' y2='24.4' gradientunits='userSpaceOnUse')
+        stop(stop-color='#0184FF')
+        stop(offset='1' stop-color='#0184FF' stop-opacity='0')
+mixin card-icon2
+  svg(width='38' height='38' viewbox='0 0 38 38' fill='none' xmlns='http://www.w3.org/2000/svg')
+    path(d='M1.44995 33.4664H5.83745M19 33.4664L15.6605 36.8058M19 33.4664H14.6125M19 33.4664H23.3875M10.225 33.4664L6.88555 36.8058M10.225 33.4664H14.6125M10.225 33.4664H5.83745M14.6125 33.4664L11.273 36.8058M5.83745 33.4664L2.49805 36.8058M27.775 33.4664L24.4356 36.8058M27.775 33.4664H23.3875M27.775 33.4664H32.1625M23.3875 33.4664L20.0481 36.8058M32.1625 33.4664H36.55L33.2106 36.8058M32.1625 33.4664L28.8231 36.8058' stroke='url(#paint0_linear_312_9)' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round')
+    path(d='M7.10706 7.99107V14.4117C7.10706 21.0465 12.4317 26.425 18.9999 26.425C25.5682 26.425 30.8928 21.0465 30.8928 14.4117V7.99107M13.0535 7.99107V14.4117C13.0535 17.7291 15.7158 20.4183 18.9999 20.4183C22.284 20.4183 24.9463 17.7291 24.9463 14.4117V7.99107' stroke='url(#paint1_linear_312_9)' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round')
+    path(d='M7.10706 6.20714L7.10706 2.0352C7.10706 1.712 7.37329 1.45 7.7017 1.45H12.4588C12.7873 1.45 13.0535 1.712 13.0535 2.0352V6.20714M24.9463 6.20714V2.0352C24.9463 1.712 25.2126 1.45 25.541 1.45H30.2981C30.6265 1.45 30.8928 1.712 30.8928 2.0352V6.20714' stroke='url(#paint2_linear_312_9)' stroke-width='1.5' stroke-linecap='round')
+    defs
+      lineargradient#paint0_linear_312_9(x1='19' y1='33.0933' x2='19' y2='37.1433' gradientunits='userSpaceOnUse')
+        stop(stop-color='#0E2245')
+        stop(offset='1' stop-color='#0E2245' stop-opacity='0')
+      lineargradient#paint1_linear_312_9(x1='18.9999' y1='7.99107' x2='18.9999' y2='26.425' gradientunits='userSpaceOnUse')
+        stop(stop-color='#0184FF')
+        stop(offset='1' stop-color='#0184FF' stop-opacity='0')
+      lineargradient#paint2_linear_312_9(x1='18.9999' y1='1.45' x2='18.9999' y2='6.20714' gradientunits='userSpaceOnUse')
+        stop(stop-color='#0184FF')
+        stop(offset='1' stop-color='#0184FF' stop-opacity='0')
+
+
