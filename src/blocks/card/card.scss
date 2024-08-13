@@ -1,26 +1,42 @@
 .card {
   $comp: &;
   position: relative;
+
+  &:hover {
+    #{$comp}__main {
+      visibility: hidden;
+      opacity: 0;
+    }
+    #{$comp}__descr {
+      visibility: visible;
+      opacity: 1;
+    }
+    #{$comp}__image {
+      transform: scale(1.1);
+    }
+  }
   &__item {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: space-between;
-    column-gap: rem(9px);
     width: rem(896px);
     height: rem(536px);
     border-radius: rem(6px);
     padding: rem(8px);
     background-color: #F1F3F4;
     cursor: pointer;
-    &:hover {
-      #{$comp}__main {
-        visibility: hidden;
-        opacity: 0;
-      }
-      #{$comp}__descr {
-        visibility: visible;
-        opacity: 1;
-      }
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    column-gap: rem(9px);
+    @media#{media("<", d)} {
+      width: rem(351px);
+      height: rem(453px);
+      border-radius: rem(4px);
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-content: space-between;
+      column-gap: rem(0px);
+    }
+    @media#{media("<", d)} {
+
     }
   }
   &__photo {
@@ -30,17 +46,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    @media#{media("<", d)} {
+      height: rem(220px);
+    }
   }
   &__image {
-    //width: auto;
-    //height: rem(377px);
-    width: rem(212px);
+    width: rem(280px);
     height: rem(377px);
+    transition: transform 0.6s ease-in-out;
     img {
       display: block;
-      //object-fit: contain;
-      width: rem(212px);
-      height: rem(377px);
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+    }
+    @media#{media("<", d)} {
+      width: rem(250px);
+      height: rem(160px);
     }
   }
   &__stikers {
@@ -62,8 +84,13 @@
     padding: rem(40px);
     background-color: #FFF;
     border-radius: rem(4px);
+    @media#{media("<", d)} {
+      width: 100%;
+      height: rem(217px);
+      padding: rem(15px) rem(16px);
+    }
   }
-  &__main {
+  &__base {
     position: relative;
     height: 100%;
     display: flex;
@@ -71,6 +98,9 @@
     justify-content: flex-start;
     row-gap: rem(20px);
     transition: opacity .8s ease-in-out;
+    @media#{media("<", d)} {
+      row-gap: rem(12px);
+    }
   }
   &__title {
     font-size: rem(40px);
@@ -80,6 +110,17 @@
     font-family: $rubic;
     text-transform: uppercase;
     color: #0E2245;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @media#{media("<", d)} {
+      font-size: rem(20px);
+      line-height: rem(24px);
+      letter-spacing: -2%;
+      -webkit-line-clamp: 1;
+    }
   }
   &__header {
   }
@@ -91,7 +132,11 @@
     letter-spacing: -1%;
     padding: rem(8px) rem(16px);
     color: #898F9A;
-
+    @media#{media("<", d)} {
+      font-size: rem(12px);
+      line-height: rem(18px);
+      padding: rem(4px) rem(12px);
+    }
   }
   &__text {
     font-size: rem(20px);
@@ -99,13 +144,18 @@
     letter-spacing: -1%;
     color: #0E2245;
     font-family: $rubic;
-    -webkit-line-clamp: 6;
+    -webkit-line-clamp: 4;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
     &_more {
-      -webkit-line-clamp: 13;
+      -webkit-line-clamp: 9;
+    }
+    @media#{media("<", d)} {
+      font-size: rem(12px);
+      line-height: rem(18px);
+      -webkit-line-clamp: 3;
     }
   }
   &__footer {
@@ -121,6 +171,10 @@
     letter-spacing: -1%;
     color: #0E2245;
     font-family: $rubic;
+    @media#{media("<", d)} {
+      font-size: rem(18px);
+      line-height: rem(23px);
+    }
   }
   &__dop-info {
     display: block;
@@ -131,6 +185,10 @@
     color: #898F9A;
     font-family: $rubic;
     padding-top: rem(6px);
+    @media#{media("<", d)} {
+      font-size: rem(12px);
+      line-height: rem(18px);
+    }
   }
   &__arrow {
     cursor: pointer;
@@ -140,10 +198,13 @@
     justify-content: center;
     align-items: center;
     align-self: flex-end;
-
     svg {
-      width: rem(24px);
-      height: rem(24px);
+      width: 100%;
+      height: 100%;
+    }
+    @media#{media("<", d)} {
+      width: rem(16px);
+      height: rem(16px);
     }
   }
 

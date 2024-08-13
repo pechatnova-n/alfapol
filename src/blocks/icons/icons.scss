@@ -31,6 +31,15 @@
       height: rem(35px);
       object-fit: contain;
     }
+    @media#{media("<", d)} {
+      width: rem(32px);
+      height: rem(32px);
+      border-radius: rem(2px);
+      svg {
+        width: rem(20px);
+        height: rem(20px);
+      }
+    }
   }
   &__tooltip {
     position: relative;
@@ -57,6 +66,18 @@
       content: "";
       border-radius: rem(4px);
       background-color: #0D4894;
+    }
+    @media#{media("<", d)}{
+      font-size: rem(14px);
+      line-height: rem(16px);
+      padding: rem(8px) rem(10px);
+      border-radius: rem(4px);
+      &::before {
+        width: rem(10px);
+        height: rem(10px);
+        left: rem(-3px);
+        border-radius: rem(2px);
+      }
     }
   }
 }

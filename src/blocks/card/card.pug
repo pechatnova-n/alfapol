@@ -11,14 +11,14 @@ mixin card(mods)
     }
 
   .card(class=allMods)&attributes(attributes)
-    .card__item(href="#")
+    .card__item
       .card__photo
         .card__image
           +picture('card.png')
         +icons.card__icons
         +stikers.card__stikers
       .card__info
-        .card__main
+        .card__base
           header.card__header
             span.card__hat Антистатические полы и покрытия
           h2.card__title АЛЬФАПОЛ ПУ-4 ВН АСХ
