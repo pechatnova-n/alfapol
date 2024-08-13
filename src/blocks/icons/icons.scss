@@ -42,6 +42,8 @@
     }
   }
   &__tooltip {
+    display: flex;
+    align-items: center;
     position: relative;
     visibility: hidden;
     opacity: 0;
