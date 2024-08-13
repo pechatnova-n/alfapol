@@ -1,20 +1,18 @@
 .card {
   $comp: &;
   position: relative;
-
-  &:hover {
-    #{$comp}__main {
-      visibility: hidden;
-      opacity: 0;
-    }
-    #{$comp}__descr {
-      visibility: visible;
-      opacity: 1;
-    }
-    #{$comp}__image {
-      transform: scale(1.1);
-    }
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: rem(8px);
+  grid-column-gap: rem(8px);
+  padding: 0 rem(60px);
+  @media#{media("<", d)}{
+    padding: 0 rem(12px);
+    overflow-x: scroll;
+    grid-auto-flow: column;
+    @include scrollbar-hidden;
   }
+
   &__item {
     width: rem(896px);
     height: rem(536px);
@@ -26,6 +24,20 @@
     grid-template-columns: repeat(2, 1fr);
     justify-content: space-between;
     column-gap: rem(9px);
+    &:hover {
+      box-shadow: 0px rem(32px) rem(60px) 0 #0E22453D;
+      #{$comp}__base {
+        visibility: hidden;
+        opacity: 0;
+      }
+      #{$comp}__descr {
+        visibility: visible;
+        opacity: 1;
+      }
+      #{$comp}__image {
+        transform: scale(1.1);
+      }
+    }
     @media#{media("<", d)} {
       width: rem(351px);
       height: rem(453px);
